@@ -1,6 +1,7 @@
 from flask import Flask,render_template,jsonify,request
 from flask_sqlalchemy import SQLAlchemy
 import json
+import os
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] ='postgresql://postgres:root@localhost:5432/api'
@@ -175,5 +176,8 @@ class Livre(db.Model):
 
 
 db.create_all()
+if __name__ == "__main__":
+	port = int(os.environ.get("PORT", 5000))
+    	app.run(host="0.0.0.0", port=port)
 # s Livre(db.Model):
 #app.run(debug=True)
