@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] ='postgresql://postgres:root@localhost:5432/api'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hjxmhzdcobywnv:4eea5de9b9f5c0a384d3e82e5bb0e65d06f9e630082cbb8f12c828b3d65d9573@ec2-52-73-149-159.compute-1.amazonaws.com:5432/d1f54elmspndr0'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://hjxmhzdcobywnv:4eea5de9b9f5c0a384d3e82e5bb0e65d06f9e630082cbb8f12c828b3d65d9573@ec2-52-73-149-159.compute-1.amazonaws.com:5432/d1f54elmspndr0'
 db = SQLAlchemy(app)
 
 @app.route('/')
