@@ -139,13 +139,13 @@ def get_categorie_livre(id):
 
 
 @app.route('/ajouter/livre/',methods=["POST"])
-def get_livrex():
+def ajouter_livre():
 	book_data = json.loads(request.data.decode())
 	livrex = Livre(code=book_data['ISBN'],titre=book_data['titre'],datePublication=book_data['datePublication'],categorie_id=book_data['categorie_id'],nomAuteur=book_data['nomAuteur'],nomEditeur=book_data['nomEditeur'])
 	
 	db.session.add(livrex)
 	db.session.commit()
-	return 'hello'
+	return {"message":"livre ajouter"}
 	
 @app.route('/ajouter/categorie',methods=["POST"])
 def ajouter_categorie():
