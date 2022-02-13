@@ -140,20 +140,27 @@ def get_categorie_livre(id):
 
 @app.route('/ajouter/livre/',methods=["POST"])
 def ajouter_livre():
-	book_data = json.loads(request.data.decode())
-	livrex = Livre(code=book_data['ISBN'],titre=book_data['titre'],datePublication=book_data['datePublication'],categorie_id=book_data['categorie_id'],nomAuteur=book_data['nomAuteur'],nomEditeur=book_data['nomEditeur'])
+	try:
+		
+		book_data = json.loads(request.data.decode())
+		livrex = Livre(code=book_data['ISBN'],titre=book_data['titre'],datePublication=book_data['datePublication'],categorie_id=book_data['categorie_id'],nomAuteur=book_data['nomAuteur'],nomEditeur=book_data['nomEditeur'])
 	
-	db.session.add(livrex)
-	db.session.commit()
-	return {"message":"livre ajouter"}
+		db.session.add(livrex)
+		db.session.commit()
+		return {"message":"livre ajouter"}
+	except:
+		return {"message":"livre non ajouter"}
 	
 @app.route('/ajouter/categorie',methods=["POST"])
 def ajouter_categorie():
-	categorie_data = json.loads(request.data.decode())
-	categorie = Categorie(id=categorie_data["id"],libelle=categorie_data["libelle"])
-	db.session.add(categorie)
-	db.session.commit()
-	return {"message":"categorie ajouter"}
+	try:
+		categorie_data = json.loads(request.data.decode())
+		categorie = Categorie(id=categorie_data["id"],libelle=categorie_data["libelle"])
+		db.session.add(categorie)
+		db.session.commit()
+		return {"message":"categorie ajouter"}
+	except:
+		return {"message":"categorie non ajouter"}
 	
 
 class Categorie(db.Model):
