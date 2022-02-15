@@ -3,7 +3,7 @@
 
 Bibliotheque est une api permettant d'ajouter,de supprimer,de modifier,d'obtenir la liste des categories et des livres disponible
 
-## Categorie liste [/categories]
+## Categorie liste [/categories/]
 
 ### liste toutes les categories [GET]
 
@@ -94,7 +94,7 @@ Bibliotheque est une api permettant d'ajouter,de supprimer,de modifier,d'obtenir
 #########################
 
 
-## Livre liste [/livres]
+## Livre liste [/livres/]
 
 ### liste toutes les livres [GET]
 
