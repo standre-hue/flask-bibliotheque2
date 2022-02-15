@@ -71,7 +71,7 @@ Bibliotheque est une api permettant d'ajouter,de supprimer,de modifier,d'obtenir
     },...]
     }
 
-##  Categorie mise a jour du libelle [/categorie/id]
+##  Categorie mise a jour du libelle [/categorieUpdate/]
 
 ### Mettre a jour le libelle d' une  categories donnee [PUT]
 
@@ -156,7 +156,7 @@ Bibliotheque est une api permettant d'ajouter,de supprimer,de modifier,d'obtenir
 
 
     
-##  Mise a jour d'un livre [live/id]
+##  Mise a jour d'un livre [livreUpdate/]
 
 ### Mettre a jour information d'un livre donnee [PUT]
 
