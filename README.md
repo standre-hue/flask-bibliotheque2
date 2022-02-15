@@ -51,7 +51,7 @@ Bibliotheque est une api permettant d'ajouter,de supprimer,de modifier,d'obtenir
 
 
     
-##  Categorie affichage des livres [/categorie/id/lives/]
+##  Categorie affichage des livres [/categorie/id/livres/]
 
 ### Affiche les livres d' une  categories donnee [GET]
 
@@ -156,7 +156,7 @@ Bibliotheque est une api permettant d'ajouter,de supprimer,de modifier,d'obtenir
 
 
     
-##  Mise a jour d'un livre [livreUpdate/]
+##  Mise a jour d'un livre [/livreUpdate/]
 
 ### Mettre a jour information d'un livre donnee [PUT]
 
